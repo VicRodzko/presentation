@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/moon.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown>
+          # DOM EVENTS
+          <p>Victor Rodzko, Minsk - 2018</p>
+        </section>
+        <section class="title">
+          <section>
+            <h2>DOM EVENTS</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              DOM Events are sent to notify code of interesting things that have taken place. Events
+              can represent everything from basic user interactions to automated notifications of
+              things happening in the rendering model.
+            </p>
+          </section>
+        </section>
+        <section class="typeEvents">
+          <section>
+            <h2 class="type-h2">Types</h2>
+            <ul class="type-ul">
+              <li class="fragment visible" data-fragment-index="0">Mouse events</li>
+              <li class="fragment visible" data-fragment-index="1">Keyboard events</li>
+              <li class="fragment visible" data-fragment-index="2">Touch events</li>
+              <li class="fragment visible" data-fragment-index="3">Drag and drop envents</li>
+              <li class="fragment visible" data-fragment-index="4">HTML form envents</li>
+              <li class="fragment visible" data-fragment-index="5">HTML frame/object events</li>
+            </ul>
+          </section>
+        </section>
+        <section class="mouseEvents">
+          <section>
+            <h2 class="mouse-h2">Mouse Events</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              This events occur when the user interacted with a pointing device (such as a mouse).
+            </p>
+            <ul class="mouse-ul">
+              <li class="fragment visible" data-fragment-index="1">click</li>
+              <li class="fragment visible" data-fragment-index="2">dblclick</li>
+              <li class="fragment visible" data-fragment-index="3">mousedown</li>
+              <li class="fragment visible" data-fragment-index="4">mousemove</li>
+              <li class="fragment visible" data-fragment-index="5">mouseover</li>
+              <li class="fragment visible" data-fragment-index="6">mouseup</li>
+            </ul>
+          </section>
+        </section>
+        <section class="keyboardEvents">
+          <section>
+            <h2>Keyboard Events</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              They describe a user interaction with the keyboard. Each event describes a single
+              interaction between the user and a key on the keyboard.
+            </p>
+            <ul class="keyboard-ul">
+              <li class="fragment visible" data-fragment-index="1">keydown</li>
+              <li class="fragment visible" data-fragment-index="2">keypress</li>
+              <li class="fragment visible" data-fragment-index="3">keyup</li>
+            </ul>
+          </section>
+        </section>
+        <section class="touchEvents">
+          <section>
+            <h2>Touch Events</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              This events sent when the state of contacts with a touch-sensitive surface changes.
+            </p>
+            <ul class="keyboard-ul">
+              <li class="fragment visible" data-fragment-index="1">touchstart</li>
+              <li class="fragment visible" data-fragment-index="2">touchend</li>
+              <li class="fragment visible" data-fragment-index="3">touchmove</li>
+              <li class="fragment visible" data-fragment-index="4">touchcancel</li>
+            </ul>
+          </section>
+        </section>
+        <section class="dragEvents">
+          <section>
+            <h2>Drag and drop envents</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              The user initiates a drag by placing a pointer device on the touch surface and then
+              dragging the pointer to a new location.
+            </p>
+            <ul class="keyboard-ul">
+              <li class="fragment visible" data-fragment-index="1">drag</li>
+              <li class="fragment visible" data-fragment-index="2">dragstart</li>
+              <li class="fragment visible" data-fragment-index="3">dragend</li>
+              <li class="fragment visible" data-fragment-index="4">drop</li>
+            </ul>
+          </section>
+        </section>
+        <section class="formEvents">
+          <section>
+            <h2>Form element events</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              Form events tracks information or fields at different steps of the workflow: from the
+              population of the form to the submission of the data from the request.
+            </p>
+            <ul class="keyboard-ul">
+              <li class="fragment visible" data-fragment-index="1">change</li>
+              <li class="fragment visible" data-fragment-index="2">focus</li>
+              <li class="fragment visible" data-fragment-index="3">reset</li>
+              <li class="fragment visible" data-fragment-index="4">submit</li>
+              <li class="fragment visible" data-fragment-index="5">select</li>
+            </ul>
+          </section>
+        </section>
+        <section class="objectEvents">
+          <section>
+            <h2>HTML frame/object events</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              Form events tracks information or fields at different steps of the workflow: from the
+              population of the form to the submission of the data from the request.
+            </p>
+            <ul class="keyboard-ul">
+              <li class="fragment visible" data-fragment-index="1">error</li>
+              <li class="fragment visible" data-fragment-index="2">load</li>
+              <li class="fragment visible" data-fragment-index="3">resize</li>
+              <li class="fragment visible" data-fragment-index="4">scroll</li>
+              <li class="fragment visible" data-fragment-index="5">unload</li>
+            </ul>
+          </section>
+        </section>
+        <section class="handlers">
+          <section>
+            <h2>Event handlers</h2>
+            <p class="fragment visible" data-fragment-index="0">
+              To react on events we can assign a handler – a function that runs in case of an event.
+              Handlers are a way to run JavaScript code in case of user actions. There are several
+              ways to assign a handler:
+            </p>
+          </section>
+          <section>
+            <h3>HTML-attribute</h3>
+						<p>
+							A handler can be set in HTML with an attribute named on<event>. 
+							For instance, to assign a click handler for an input, we can use onclick, like here:
+						</p>
+            <section>
+              <pre><code data-trim><input value="Click me" onclick="alert('Click!')" type="button"></code></pre>
+            </section>
+						<input value="Press me" onclick="alert('Click!')" type="button" />
+						<p class="fragment visible" data-fragment-index="0">
+							This is a bad practice:( Forget it!
+						</p>
+					</section>
+					<section>
+						<h3>DOM property</h3>
+						<p>
+							We can assign a handler using a DOM property on<event>. For instance, elem.onclick:
+						</p>
+						<section>
+							<pre><code data-trim><input id="elem" type="button" value="Press me">
+<script>
+	elem.onclick = function() {
+		alert('Thank you');
+	};
+</script></code></pre>
+						</section>
+						<input value="Press me" onclick="alert('Thank you')" type="button" />
+						<p class="fragment visible" data-fragment-index="0">
+							The handler is always in the DOM property: the HTML-attribute is just one of the ways to initialize it.
+						</p>
+					</section>
+					<section>
+						<h3>addEventListener</h3>
+						<p>
+							The fundamental problem of the aforementioned ways to assign handlers – 
+							we can’t assign multiple handlers to one event.
+						</p>
+						<pre><code data-trim>element.addEventListener(event, handler);</code></pre>
+						<p>event - event name, e.g. "click"; handler - the handler function</p>
+					</section>
+				</section>
+				<section class="objectEvents">
+					<section>
+						<h2>Bubbling and capturing</h2>
+						<p class="fragment visible" data-fragment-index="0">
+								When an event happens on an element, it first runs the handlers on it, 
+								then on its parent, then all the way up on other ancestors.
+						</p>
+						<section class="fragment visible" data-fragment-index="1">
+								There’s another phase of event processing called “capturing”. 3 phases of event propagation:
+								<p>- capturing phase.</p>
+								<p>- target phase</p>
+								<p>- bubbling phase</p>
+						</section>
+					</section>
+					<section>
+							<img src="img/Bubbling and capturing.jpeg">
+						</section>
+				</section>
+				<section class="prevent">
+					<section>
+						<h2>Preventing browser actions</h2>
+						<p class="fragment visible" data-fragment-index="0">
+								The main way is to use the event object. There’s a method event.preventDefault().
+						</p>
+						<section class="fragment visible" data-fragment-index="1">
+							<pre><code data-trim><a href="/" onclick="event.preventDefault()">Click here</a></code></pre>
+						</section>
+					</section>
+				</section>
+				<section class="ths">
+						<h6>Thanks for your attention and rate me! )</h6>
+				</section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>
