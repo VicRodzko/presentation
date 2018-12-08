@@ -1,0 +1,7 @@
+.typeEvents section ul li {
+  list-style: none;
+}
+
+.typeEvents section ul li i {
+  margin-right: 30px;
+}

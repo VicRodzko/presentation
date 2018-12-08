@@ -11,10 +11,10 @@
 
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/theme/moon.css" />
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css" />
-
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Printing and PDF exports -->
     <script>
       var link = document.createElement('link');
@@ -47,12 +47,12 @@
           <section>
             <h2 class="type-h2">Types</h2>
             <ul class="type-ul">
-              <li class="fragment visible" data-fragment-index="0">Mouse events</li>
-              <li class="fragment visible" data-fragment-index="1">Keyboard events</li>
-              <li class="fragment visible" data-fragment-index="2">Touch events</li>
-              <li class="fragment visible" data-fragment-index="3">Drag and drop events</li>
-              <li class="fragment visible" data-fragment-index="4">HTML form events</li>
-              <li class="fragment visible" data-fragment-index="5">HTML frame/object events</li>
+              <li class="fragment visible" data-fragment-index="0"><i class="fas fa-mouse-pointer"> </i> Mouse events</li>
+              <li class="fragment visible" data-fragment-index="1"><i class="fas fa-keyboard"> </i> Keyboard events</li>
+              <li class="fragment visible" data-fragment-index="2"><i class="far fa-hand-point-up"> </i> Touch events</li>
+              <li class="fragment visible" data-fragment-index="3"><i class="fas fa-exchange-alt"> </i> Drag and drop events</li>
+              <li class="fragment visible" data-fragment-index="4"><i class="fab fa-wpforms"> </i>HTML form events</li>
+              <li class="fragment visible" data-fragment-index="5"><i class="far fa-object-group"> </i> HTML frame/object events</li>
             </ul>
           </section>
         </section>
@@ -163,7 +163,7 @@
             </section>
 						<input value="Press me" onclick="alert('Click!')" type="button" />
 						<p class="fragment visible" data-fragment-index="0">
-							This is a bad practice:( Forget it!
+							<i class="far fa-thumbs-down"></i> This is a bad practice:( Forget it!
 						</p>
 					</section>
 					<section>
@@ -188,7 +188,7 @@
 						<h3>addEventListener</h3>
 						<p>
 							The fundamental problem of the aforementioned ways to assign handlers – 
-							we can’t assign multiple handlers to one event.
+							we can’t assign multiple handlers to one event. Perhaps in the following way:
 						</p>
 						<pre><code data-trim>element.addEventListener(event, handler);</code></pre>
 						<p>event - event name, e.g. "click"; handler - the handler function</p>
